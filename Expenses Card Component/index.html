@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="charts">
+    <div class="charts-balance">
+      <div class="charts-balance-info">
+        <p>My balance</p>
+        <span>$921.48</span>
+      </div>
+      <div class="charts-balance-icon">
+        <img src="images/logo.svg">
+      </div>
+    </div>
+    <div class="charts-chart">
+      <span class="chart-title">Spending - Last 7 days</span>
+      <div class="chart-week">
+          <div class="chart-item">
+            <div class="cost-m cost hidden"><p class="sum">$17.45</p></div>
+            <div class="chart-m chart-element"></div>
+            <p class="day">mon</p>
+          </div>
+
+          <div class="chart-item">
+            <div class="cost-t cost hidden"><p class="sum">$34.91</p></div>
+            <div class="chart-t chart-element"></div>
+            <p class="day">tue</p>
+          </div>
+
+          <div class="chart-item">
+            <div class="cost-w cost hidden"><p class="sum">$52.36</p></div>
+            <div class="chart-w chart-element chosen"></div>
+            <p class="day">wed</p>
+          </div>
+
+          <div class="chart-item">
+            <div class="cost-th cost hidden"><p class="sum">$31.07</p></div>
+            <div class="chart-th chart-element"></div>
+            <p class="day">thu</p>
+          </div>
+
+          <div class="chart-item">
+            <div class="cost-f cost hidden"><p class="sum">$23.39</p></div>
+            <div class="chart-f chart-element"></div>
+            <p class="day">fri</p>
+          </div>
+
+          <div class="chart-item">
+            <div class="cost-s cost hidden"><p class="sum">$43.28</p></div>
+            <div class="chart-s chart-element"></div>
+            <p class="day">sat</p>
+          </div>
+
+          <div class="chart-item">
+            <div class="cost-su cost hidden">
+              <p class="sum">$25.48</p>
+            </div>
+            <div class="chart-su chart-element"></div>
+            <p class="day">sun</p>
+          </div>
+        </div>
+        <hr>
+        <div class="charts-chart-summary">
+          <div class="chart-summary col-1">
+            <p>Total this month</p>
+            <span>$478.33</span>
+          </div>
+          <div class="chart-summary col-2">
+            <span>+2.4%</span>
+            <p>from last month</p>
+          </div>
+        </div>
+    </div>
+  </div>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mateusz Hanak</a>.
+  </div>
+
+  <script type="text/javascript" src="data.json"></script>
+  <script type="text/javascript" src="chartValues.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --vdarkblue:  hsl(216, 12%, 8%);
+    --darkblue: hsl(213, 19%, 18%);
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(217, 12%, 63%);
+    --mediumgrey: hsl(216, 12%, 54%);
+    --orange:hsl(25, 97%, 53%);
+}
+
+
+
+.card-result{
+    display: none;
+}
+
+.card-rating{
+    display: unset;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--vdarkblue);
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+    .card{
+        margin-left: 1.5em;
+        margin-right: 1.5em;  
+        width: 100%; 
+        background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+        border-radius: 15px;
+        max-width: 428px;
+        max-height: 457px;
+        flex-grow: 1;
+    }
+
+        .star{
+            position: relative;
+            top: 1.5em;
+            left: 2.5em;
+            border-radius: 60%;
+            border: solid 10px var(--darkblue);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 5%;
+            padding: .4em;
+            z-index: 0;
+            min-height: 60px;
+            min-width: 60px;
+            line-height: 60px;
+        
+        }
+        span{
+            background: #262E38;
+        }
+
+        .star-img{
+            min-width: 1em;
+            margin-left: 1em;
+            margin-right: 1em;
+            min-height: 1em;
+            z-index: 2;
+        }
+
+        .container{
+            margin-left: 2em;
+            margin-right: 2em;
+            margin-top: 2.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+            p{
+                color: var(--mediumgrey);
+                margin-top: 1.5em;
+            }
+
+            h1{
+            
+            }
+
+            .ratings{
+                margin-top: 1.5em;
+                display: flex;
+                justify-content: space-between;
+                gap: 1em;
+            }
+
+                .rat{
+                    background: var(--darkblue);
+                    min-height: 60px;
+                    min-width: 60px;
+                    line-height: 60px;
+                    display: block;
+                    text-align: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .rat:hover{
+                    background: var(--lightgrey);
+                    color: var(--white);
+                }
+
+                .rat:focus{
+                    background: var(--orange);
+                    color: var(--white);
+                }
+
+            button{
+                margin-top: 1.5em;
+                text-align: center;
+                margin-bottom: 1em;
+                width: 100%;
+                height: 2.5em;
+                margin-right: auto;
+                margin-left: auto;
+                border: none;
+                border-radius: 3em;
+                background: var(--orange);
+                font-size: 20px;
+                color: var(--white);
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background: var(--white);
+                color: var(--orange);
+            }
+
+            .card-rating{
+              
+            }
+            
+            .card-result{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-result img{
+                margin-top: 2em;
+                height: 6em;
+                width: 8em;
+            }
+
+            .card-result span{
+                margin-top: 1.5em;
+                background: var(--darkblue);
+                padding: .7em;
+                border-radius: 18px;
+                color: var(--orange);
+            }
+
+            .card-result h1{
+                margin-top: .4em;
+            }
+
+            .card-result p{
+                text-align: center;
+                margin-left: 1em;
+                margin-right: 1em;
+                margin-bottom: 1.5em;
+            }
+
+            .choice{
+
+            }
+
+            .hidden{
+                display: none;
+            }
+
+           
+
+/* Dark Blue */
+
+
+    
+
+
+
