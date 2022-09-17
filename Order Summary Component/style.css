@@ -1,0 +1,203 @@
+/* 
+
+TABLE OF CONTENT: 
+
+1. Variables
+2. General styling
+3. Layout
+4. Utility classes
+   
+You can find all resets in separate .css file
+
+This is my first try to CSS Box Model and naming - feedback welcomed! 
+
+*/
+
+:root{
+    --clr-neutral-100: hsl(0 0% 100%);
+    --clr-neutral-200: hsl(225, 100%, 98%);
+    --clr-neutral-400: hsl(223, 47%, 55%, 1);
+    --clr-neutral-800: hsl(223, 47%, 23%);
+    
+    --clr-accent-400: hsl(224, 23%, 55%);
+
+    --clr-primary-200: hsl(225, 100%, 94%);
+    --clr-primary-300: rgba(117, 106, 241, 0.576);
+    --clr-primary-400:  hsl(245, 75%, 52%);
+
+    --fs-500: 1.37rem;
+    --fs-400: 1rem;
+    --fs-300: 0.875rem;
+
+    --ff-primary: 'Red Hat Display', sans-serif;
+
+    --fw-400: 500;
+    --fw-700:700;
+    --fw-900: 900;
+
+    --size-ssm: 0.5rem;
+    --size-sm: 1rem;
+    --size-md: 1.5rem;
+    --size-la: 4rem;
+
+    --b-rad-s: 0.68rem;
+    --b-rad: 1.5rem;  
+
+}
+
+/* general styling */
+body{
+    font-family: var(--ff-primary);
+    background: var(--clr-primary-200);
+    display: grid;
+    place-items: center;
+    font-weight: var(--fw-400);
+}
+
+.card{
+    background: var(--clr-neutral-100);
+    max-width: 20.43rem;
+    text-align: center;
+}
+
+.card__image{
+    width: 100%;
+    border-radius: var(--b-rad) var(--b-rad) 0 0;
+}
+
+.card__wrapper{
+    margin: 2em 2em;
+}
+
+@media (min-width:50em) {
+
+    .card{
+        max-width: 28.125rem;
+        max-height: 43.56rem;
+    }
+
+    .card__wrapper{
+        margin: 4em 4em;
+    }
+}
+
+.card__text{
+    color: var(--clr-accent-400);
+    margin-top: var(--size-sm);
+}
+
+.card__price-box{
+    background: var(--clr-neutral-200);
+    padding: var(--size-sm);
+    margin: var(--size-md) 0;
+}
+
+.card__note{
+    grid-area: icon;
+}
+
+.card__price-box__tittle{
+    grid-area: title;
+    text-align: left;
+    margin-left: var(--size-md);
+}
+
+.card .card__price-box__price{
+    grid-area: price;
+    text-align: left;
+    margin-left: var(--size-md);
+    align-self: center;
+    color: var(--clr-accent-400);
+}
+
+.card__price-box__change{
+    grid-area: link;
+    align-self: center;
+    color: var(--clr-primary-400);
+    cursor: pointer;
+}
+.card__price-box__change:is(:hover, :focus){
+    color: var(--clr-primary-300);
+    outline: none;
+    text-decoration: none;
+}
+
+.card__payment-btn{
+    background: var(--clr-primary-400);
+    border: none;
+    color: var(--clr-neutral-100);
+    width: 100%;
+    padding: var(--size-sm) 0;
+    text-align: center;
+    box-shadow: 0px 10px 20px -3px var(--clr-primary-300);
+    cursor: pointer;
+}
+
+.card__payment-btn:is(:hover, :focus){
+    background: var(--clr-primary-300);
+    outline: none;
+}
+
+.card__cancel{
+    display: block;
+    color: var(--clr-accent-400);
+    text-decoration: none;
+    margin-top: var(--size-md);
+    cursor: pointer;
+}
+
+.card__cancel:is(:hover, :focus){
+    color: var(--clr-primary-800);
+    outline: none;
+}
+
+/* layout */
+
+.card__price-box{
+    display: grid;
+    grid-template: repeat(2, auto) / auto 1fr auto;
+    grid-template-areas: 
+    "icon title link"
+    "icon price link";
+}
+
+/* utility classes */
+
+.fw-semi-bold{
+    font-weight: 700;
+}
+
+.fw-bold{
+    font-weight: 900;
+}
+
+.fs-300{
+    font-size: var(--fs-300);
+}
+
+.fs-400{
+    font-size: var(--fs-400);
+}
+
+.fs-500{
+    font-size: var(--fs-500);
+}
+
+.b-rad-s{
+    border-radius: var(--b-rad-s);
+}
+
+.b-rad{
+    border-radius: var(--b-rad);
+}
+
+
+
+
+
+
+
+
+
+
+
