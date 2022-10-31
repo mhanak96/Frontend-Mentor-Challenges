@@ -250,6 +250,14 @@ html, body{
     border: none;
     border-radius: 33.5px;
     color: var(--clr-surface);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btn-primary:active,
+.btn-primary:hover {
+    background-color: #147A73;
+ 
 }
 
 /* ===================
@@ -261,7 +269,7 @@ header{
     background-image: url(/images/image-hero-mobile.jpg);
     background-repeat: no-repeat;
     object-fit: cover;
-    background-size: contain;
+    background-size: cover;
     min-height: 50vh;
   /* kolo 540px wiekszy  */
 }
@@ -270,7 +278,9 @@ header{
     /* position: fixed;
     top: 1.8rem;
     /* right: 2rem; */
-    z-index: 4; 
+    z-index: 12; 
+    display: block;
+    cursor: pointer;
 }
 
 .primary-nav {
@@ -281,6 +291,7 @@ header{
 
 .primary-nav__list {
     display: none;
+    margin-right: 1.6rem;
 }
 
 .primary-nav__list :not(:last-child){
@@ -304,17 +315,21 @@ header{
     padding: 2.4rem;
 }
 
-
+.nav__item a {
+    text-decoration: none;
+    color: var(--clr-secondary);
+}
 
 /* main */
 main{
     position: absolute;
-    bottom: -158%;
+    /* bottom: -158%; */
     z-index: 2;
+    top: 25%;
 }
 
 .project-header{
-    grid-template: repeat(3, auto) / repeat(3, auto);
+    grid-template: repeat(3, auto) / repeat(2, 1fr) auto;
     grid-template-areas:
     "title title title"
     "subtitle subtitle subtitle"
@@ -330,6 +345,7 @@ main{
     margin-top: 2rem;
     max-width: 260px;
     margin-inline: auto;
+    line-height: 1.3;
 }
 
 .project__title::before{
@@ -343,6 +359,7 @@ main{
 .project__subtitle{
     grid-area: subtitle;
     margin-bottom: 2.4rem;
+    line-height: 1.7;
 }
 
 .btn-cta{
@@ -350,6 +367,8 @@ main{
     margin-bottom: 1rem;
     justify-self: start;
     padding: 2rem 2rem;
+    width: 100%;
+    max-width: 28rem;
 }
 
 .btn-bookmark{
@@ -358,6 +377,12 @@ main{
     background: none;
     border: none;
     justify-self: end;
+    margin-left: .9rem;
+    cursor: pointer;
+}
+
+.btn-bookmark:hover{
+    filter: sepia(100%) grayscale(100%) ;
 }
 
 /* project stats */
@@ -375,6 +400,27 @@ main{
     margin-top: .9rem;
 }
 
+.stats__progress-bar{
+    padding: 1rem;
+    margin-top: 3.2rem;
+    /* opacity: 0.05; */
+    border-radius: 33.5px;
+    position: relative;
+    background-color: #7a7a7a30;
+}
+
+.stats__progress-bar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    background-color: var(--clr-primary);
+    padding: 1rem;
+    opacity: 1;
+    border-radius: 33.5px;
+}
+
 /* project about */
 .project-about{
     margin-top: 2.4rem;
@@ -384,8 +430,13 @@ main{
     margin-bottom: 2.4rem;
 }
 
+.about__text{
+    line-height: 1.6;
+}
+
 .about__subtitle{
     margin-top: 2.4rem;
+    line-height: 1.6;
 }
 
 .about__card{
@@ -403,6 +454,7 @@ main{
 
 .card__text{
     margin-top: 2.4rem;
+    line-height: 1.6;
 }
 
 .card__aviability{
@@ -438,17 +490,24 @@ main{
     top: 20%;
     left: 2.5rem;
     z-index: 100;
-    border: 2px solid red;
     background-color: var(--clr-surface);
 }
 
 .modal__title-container{
    justify-content: space-between;
-   align-items: center;
+   align-items: baseline;
+}
+
+.modal__subtitle{
+    line-height: 1.6;
 }
 
 .modal__close{
-    width: 1.4rem;
+    cursor: pointer;
+}
+
+.modal__close:hover{
+    fill: #000000;
 }
 
 .modal[open]{
@@ -469,6 +528,10 @@ main{
 
 .modal-box{
     padding: 2.4rem 3.2rem;
+}
+
+.modal-box--disabled{
+    opacity: 0.5;
 }
 
 .active{
@@ -499,6 +562,14 @@ main{
     width: 2.4rem;
     height: 2.4rem;
     margin-right: 1.6rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal__option:disabled{
+    pointer-events: none;
 }
 
 .modal__choice--first .modal-pledge__title{
@@ -515,6 +586,10 @@ main{
     grid-area: pledge;
 }
 
+.modal-pledge__text{
+    line-height: 1.6;
+}
+
 .modal__payment{
     padding-top: 3rem;
     grid-template: repeat(2, auto) / repeat(2, auto);
@@ -523,23 +598,32 @@ main{
     "pay-input btn";
     margin-inline: auto;
     position: relative;
+    display: none;
 }
 
-.modal__payment::after{
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: -15%;
-    width: 130.5%;
-    height: 1px;
-    background-color: var(--clr-secondary);
-    opacity: 0.15;
-    z-index: 200;
+.modal__payment.pay-active {
+    display: grid;
 }
 
 .payment__text{
-    margin-bottom: 1.6rem;
+    margin-top: 1rem;
+    margin-bottom: 3.2rem;
     grid-area: title;
+    position: relative;
+}
+
+.payment__text::after{
+    content: "";
+    position: absolute;
+    top: -2rem;
+    left: -3.2rem;
+    right: 0;
+    height: 1px;
+    width: calc(100% + 6.5rem);
+    margin-inline: auto;
+    background-color: #000000;
+    opacity: 0.15;
+
 }
 
 .payment__input{
@@ -552,26 +636,15 @@ main{
     margin-right: 1.6rem;
 }
 
+.payment__input:focus{
+    border-color: var(--clr-primary-on);
+    outline: 0 none;
+}
+
 .payment__button {
     grid-area: btn;
     padding: 1.5rem 2.5rem;
     position: relative;
-}
-
-.payment__button::after{
-    content: "$";
-    position: absolute;
-    left: -1rem;
-    color: var(--clr-secondary);
-    opacity: 0.25;
-    font-weight: 700;
-    transform: translate(50%, 50%);
-    top: 24%;
-    left: -90%;
-    font-size: 1.4rem;
-    z-index: 25;
-    width: 10%;
-    height: 10%;
 }
 
 /* succes modal */
@@ -587,12 +660,22 @@ main{
     display: none;
 }
 
-.succes-icon{
+.succes__icon{
     margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.succes__title{
+    margin-top: 1rem;
+}
+
+.succes__text{
+    margin-top: 1rem;
+    line-height: 1.6;
 }
 
 .succes-modal[show]{
-    display: block;
+    display: flex;
 }
 
 .succes__button{
@@ -601,6 +684,232 @@ main{
 
 }
 
-@media (min-width:50rem) {
-    
+main::after{
+    content: "";
+    width: 100%;
+    min-height: 4vh;
+    background-color: var(--clr-background);
+    z-index: 2;
+    position: absolute;
 }
+
+@media (min-width:36rem) {
+    .container{
+        max-width: 70.3rem;
+        margin-inline: auto;
+    }
+
+    header{
+        background-image: url(/images/image-hero-desktop.jpg);
+        background-size: cover;
+        min-height: 45rem;
+    }
+
+    .mobile-nav-toogle{
+        display: none;
+    }
+
+    .primary-nav__list{
+        display: flex;
+        flex-direction: row;
+        background: none;
+        color: var(--clr-surface);
+        font-weight: 400;
+    }
+
+    .nav__item{
+        background: none;
+        border: none;
+    }
+
+    .nav__item a {
+        text-decoration: none;
+        color: var(--clr-surface);
+    }
+
+    .primary-nav{
+        align-items: baseline;
+    }
+
+    main{
+        top: 40%;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+
+    /* components */
+
+    /* header */
+    .btn-bookmark{
+        position: relative;
+        margin-right: 17.4rem;
+        z-index: 7;
+    }
+
+    .btn-bookmark::after{
+        content: "Bookmark";
+    
+        background-color: #7a7a7a1b;
+        font-weight: var(--fw-700);
+        color: var(--clr-tertiary);
+        border-radius: 33.5px;
+        position: absolute;
+        left: 0%;
+        padding-top: 2rem;
+        padding-left: 5rem;
+        width: 18rem;
+        z-index: 2;
+        height: 56px;
+    }
+
+    .btn-cta{
+        margin-left: 4.8rem;
+    }
+
+  
+
+    /* stats */
+
+    .project-stats{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stats__list{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .stats__item--center{
+        display: block;
+        border-left: 2px solid rgba(0, 0, 0, 0.15);
+        border-right: 2px solid rgba(0, 0, 0, 0.15);
+    }
+
+    /* about */
+
+    .about__text, .about__subtitle {
+        max-width: 63.4rem;
+    }
+
+    .about__card{
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(3, auto);
+        grid-template-areas: 
+        "title . subtitle"
+        "textc textc textc"
+        "aviability . reward";
+        gap: 2.4rem;
+    }
+
+    .card__title{
+        grid-area: title;
+    }
+
+    .card__subtitle{
+        grid-area: subtitle;
+    }
+
+    .card__text{
+        grid-area: textc;
+        margin-top: 0;
+    }
+
+    .about__card .card__aviability{
+        grid-area: aviability;
+        align-self: center;
+        margin-top: 0;
+    }
+
+    .btn-reward{
+        grid-area: reward;
+        align-self: center;
+        margin: 0;
+    }
+
+    .modal{
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        max-width: 90.5rem;
+    }
+
+    .modal-box{
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(3, auto);
+        grid-template-areas: 
+        "choice choice avi"
+        "texto texto texto"
+        "pay pay pay";
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    .modal__choice{
+        grid-template: repeat(2, auto) / repeat(2, auto) 1fr;
+        grid-template-areas: 
+        "radio title pledge"
+        "radio . .";
+        align-items: center;
+        grid-area: choice;
+        margin-bottom: 0;
+    }
+
+    .modal-pledge__title, .modal__pledge{
+        margin-top: .2rem;
+        margin-bottom: 0;
+        transition: all .3s;
+        cursor: pointer;
+        
+    }
+
+    .modal-pledge__title:hover{
+       color: var(--clr-primary-on);
+    }
+
+    .modal__pledge{
+        margin-left: 1.6rem;
+    }
+
+    .modal__pledge:hover{
+        font-weight: var(--fw-700);
+        color: var(--clr-primary-on);
+    }
+
+
+    .modal-box .card__aviability{
+        grid-area: avi;
+        margin-top: 0;
+    }
+
+    .modal__pledge__text{
+        grid-area: texto;
+        margin-left: 50px;
+    }
+
+    .modal__payment{
+        grid-area: pay;
+    }
+
+    .payment__text::after{
+        content: "";
+        display: none;
+    
+    }
+    
+    /* modal succes */
+
+    .succes-modal{
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        max-width: 54rem;
+    }
+
+
+
+}
+

@@ -8,6 +8,7 @@ const btnCta = document.querySelector('.btn-cta')
 const modal = document.querySelector('.modal');
 
 const modalBox =  document.querySelectorAll('.modal-box');
+const modalPayment = document.querySelectorAll('.modal__payment');
 const options = document.querySelectorAll('.modal__option');
 
 const modalExit = document.querySelector('.modal__close');
@@ -35,10 +36,11 @@ btnCta.addEventListener('click', function(){
 options.forEach(option => option.addEventListener('click', function(){
     
     modalBox.forEach(modal => modal.classList.remove('active'));
+    modalPayment.forEach(payment => payment.classList.remove('pay-active'));
 
     let choice = option.getAttribute('choice');
     document.querySelector(`.${choice}`).classList.add('active');
-    
+    document.querySelector(`.${choice}p`).classList.add('pay-active');
 }))
 
 modalExit.addEventListener('click', function(){
