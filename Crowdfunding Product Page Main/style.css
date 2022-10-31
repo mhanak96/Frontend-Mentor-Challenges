@@ -266,7 +266,7 @@ html, body{
 
 /* header */
 header{
-    background-image: url(/images/image-hero-mobile.jpg);
+    background-image: url(https://hanak.co/projects/frontendmentor/crowfunding/images/image-hero-mobile.jpg);
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
@@ -700,7 +700,7 @@ main::after{
     }
 
     header{
-        background-image: url(/images/image-hero-desktop.jpg);
+        background-image: url(https://hanak.co/projects/frontendmentor/crowfunding/images/image-hero-desktop.jpg);
         background-size: cover;
         min-height: 45rem;
     }
