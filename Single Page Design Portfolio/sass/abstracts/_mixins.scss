@@ -1,0 +1,24 @@
+
+// values for breakpoints
+$breakpoints: (
+    'small': 43.75em,
+    'large': 56.25em,
+    'xlarge': 90em,
+);
+
+@mixin break($value) {
+    @media (max-width: map-get($breakpoints, $value)) {
+        @content;
+    }
+}
+
+@mixin pseudo($loc: before, $content: '', $position: absolute){
+    position: relative;
+    
+    &::#{$loc}{
+        content: $content;
+        position: $position;
+    }
+    
+    @content;
+}

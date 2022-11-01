@@ -1,0 +1,34 @@
+$colors: (
+    purple: #755CDE,
+    purple-dark:#552049,
+    yellow: #F6A560,
+    pink:#F39E9E,
+    red:#eb7565,
+    cyan: #61C4B7,
+    black: #030303,
+    grey: #7a746E,
+    beige: #FFF7F0,
+);
+
+// generating colors variables in root
+:root{
+
+    @each $color, $value in $colors{
+    
+        --clr-#{$color}: #{$value};
+    
+    }
+}
+
+// generating utility classses
+@each $color, $value in $colors{
+    
+    .text-clr-#{$color} {
+        color: #{$value};
+    };
+    
+    .bg-clr-#{$color} {
+        color: #{$value};
+    };
+
+}

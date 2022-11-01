@@ -1,0 +1,83 @@
+:root {
+  --clr-purple: #755CDE;
+  --clr-purple-dark: #552049;
+  --clr-yellow: #F6A560;
+  --clr-pink: #F39E9E;
+  --clr-red: #eb7565;
+  --clr-cyan: #61C4B7;
+  --clr-black: #030303;
+  --clr-grey: #7a746E;
+  --clr-beige: #FFF7F0;
+}
+
+.text-clr-purple {
+  color: #755CDE;
+}
+
+.bg-clr-purple {
+  color: #755CDE;
+}
+
+.text-clr-purple-dark {
+  color: #552049;
+}
+
+.bg-clr-purple-dark {
+  color: #552049;
+}
+
+.text-clr-yellow {
+  color: #F6A560;
+}
+
+.bg-clr-yellow {
+  color: #F6A560;
+}
+
+.text-clr-pink {
+  color: #F39E9E;
+}
+
+.bg-clr-pink {
+  color: #F39E9E;
+}
+
+.text-clr-red {
+  color: #eb7565;
+}
+
+.bg-clr-red {
+  color: #eb7565;
+}
+
+.text-clr-cyan {
+  color: #61C4B7;
+}
+
+.bg-clr-cyan {
+  color: #61C4B7;
+}
+
+.text-clr-black {
+  color: #030303;
+}
+
+.bg-clr-black {
+  color: #030303;
+}
+
+.text-clr-grey {
+  color: #7a746E;
+}
+
+.bg-clr-grey {
+  color: #7a746E;
+}
+
+.text-clr-beige {
+  color: #FFF7F0;
+}
+
+.bg-clr-beige {
+  color: #FFF7F0;
+}/*# sourceMappingURL=main.css.map */
