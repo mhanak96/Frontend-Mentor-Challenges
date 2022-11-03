@@ -7,6 +7,7 @@ $colors: (
     cyan: #61C4B7,
     black: #030303,
     grey: #7a746E,
+    white: white,
     beige: #FFF7F0,
 );
 
@@ -28,7 +29,7 @@ $colors: (
     };
     
     .bg-clr-#{$color} {
-        color: #{$value};
+        background-color: #{$value};
     };
 
 }
