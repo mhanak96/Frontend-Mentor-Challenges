@@ -1,17 +1,8 @@
-$colors: (
-    purple: #755CDE,
-    purple-dark:#552049,
-    yellow: #F6A560,
-    pink:#F39E9E,
-    red:#eb7565,
-    cyan: #61C4B7,
-    black: #030303,
-    grey: #7a746E,
-    white: white,
-    beige: #FFF7F0,
-);
+@use '../abstracts' as *;
 
 // generating colors variables in root
+// for color variables go to _variables.scss
+
 :root{
 
     @each $color, $value in $colors{

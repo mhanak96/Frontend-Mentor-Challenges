@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+.about{
+    grid-template: repeat(2, auto) / 1fr;
+    justify-content: center;
+
+    &__title,
+    &__text{
+        text-align: center;
+    }
+
+    & .btn-primary--pink{
+        margin-inline: auto;
+        margin-bottom: rem(16);
+    }
+
+    @include break(large){
+        grid-template: repeat(1, auto) / 1fr 1fr;
+        column-gap: rem(69);
+        align-items: center;
+
+        &__title,
+        &__text{
+            text-align: left;
+        }
+
+        & .btn-primary--pink{
+            margin: unset;
+        }
+    }
+}

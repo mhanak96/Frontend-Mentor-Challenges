@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.slider{
+
+    &__img{
+        border-radius: rem(10);
+        max-height: rem(180);
+    }
+
+    @include break(large){
+        &__img{
+            max-height: rem(360);
+        }
+    }
+}

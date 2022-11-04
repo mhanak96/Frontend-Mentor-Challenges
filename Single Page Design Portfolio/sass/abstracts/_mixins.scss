@@ -1,13 +1,8 @@
-
-// values for breakpoints
-$breakpoints: (
-    'small': 43.75em,
-    'large': 56.25em,
-    'xlarge': 90em,
-);
+@use 'variables' as *;
+// jezeli nie dziala to kwestia importu
 
 @mixin break($value) {
-    @media (max-width: map-get($breakpoints, $value)) {
+    @media (min-width: map-get($breakpoints, $value)) {
         @content;
     }
 }

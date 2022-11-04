@@ -1,3 +1,40 @@
+@use 'functions' as *;
+
+// all sass variables
+// 1 - breakpoints, 2 - colors, 3 - font sizes, 4 - fontweights
 
 
+// 1. values for breakpoints
+$breakpoints: (
+    'small': 43.75em,
+    'large': 40.25em,
+    'xlarge': 65em,
+);
+
+$colors: (
+    purple: #755CDE,
+    purple-dark:#552049,
+    yellow: #F6A560,
+    pink:#F39E9E,
+    red:#eb7565,
+    cyan: #61C4B7,
+    black: #030303,
+    grey: #7a746E,
+    white: white,
+    beige: #FFF7F0,
+);
+
+$font-sizes: (
+    400: clamp(0.875rem, 0.8309859154929577rem + 0.18779342723004694vw, 1rem), 
+    500: clamp(1rem, 0.9559859154929577rem + 0.18779342723004694vw, 1.125rem),
+    600: rem(24),
+    700: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem),
+    800: clamp(1.625rem, 1.3169014084507042rem + 1.3145539906103285vw, 2.5rem),
+    900: clamp(2.25rem, 1.8098591549295775rem + 1.8779342723004695vw, 3.5rem),
+);
+
+$font-weights:(
+    500: 500,
+    700: 700,
+);
 

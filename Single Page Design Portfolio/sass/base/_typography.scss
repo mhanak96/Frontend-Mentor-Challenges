@@ -1,19 +1,8 @@
-// size 16px  18px 24px  32px
+// generating fs and fw variables in root and also some utility classes
+// to modify variables values go to _variables.scss
+
 @use '../abstracts' as *;
 
-$font-sizes: (
-    400: clamp(0.875rem, 0.8309859154929577rem + 0.18779342723004694vw, 1rem), 
-    500: clamp(1rem, 0.9559859154929577rem + 0.18779342723004694vw, 1.125rem),
-    600: rem(24),
-    700: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem),
-    800: clamp(1.625rem, 1.3169014084507042rem + 1.3145539906103285vw, 2.5rem),
-    900: clamp(2.25rem, 1.8098591549295775rem + 1.8779342723004695vw, 3.5rem),
-);
-
-$font-weights:(
-    500: 500,
-    700: 700,
-);
 
 @each $size, $value in $font-sizes {
  .fs-#{$size}{
@@ -39,11 +28,11 @@ $font-weights:(
     line-height: 1.62;
 }
 
-h1{
+h1,
+h2{
     line-height: 1.26;
 }
 
 .slogan__text{
-    max-width: rem(285);
     margin-inline: auto;
 }

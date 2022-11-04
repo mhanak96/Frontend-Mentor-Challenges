@@ -1,16 +1,5 @@
 .grid{
     display: grid;
     gap: var(--gap, 1rem);
-
-    &--services{
-        grid-template: repeat(6, auto) / repeat(2, auto);
-        grid-template-areas: 
-        "gdesign gdesign"
-        "gdesign gdesign"
-        "uiux apps"
-        "ill ill"
-        "photo photo"
-        "mot mot";
-    }
 }
 

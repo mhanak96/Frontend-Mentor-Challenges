@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.box{
+    padding: rem(16);
+    text-align: center;
+    border-radius: rem(10);
+
+    &__title{
+        grid-area: title;
+    }
+
+    &__text{
+        grid-area: text;
+    }
+
+    &__button{
+        margin-inline: auto;
+        grid-area: btn;
+    }
+
+    @include break(large){
+        padding: rem(75);
+    }
+
+    @include break(xlarge){
+        padding: rem(65) rem(81);
+        text-align: left;
+    }
+}
+

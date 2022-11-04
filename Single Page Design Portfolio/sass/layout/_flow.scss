@@ -1,5 +1,5 @@
 @use '../abstracts' as *;
 
 .flow > * {
-    margin-bottom: rem(100);    
+    margin-bottom: var(--flow-gap, 1rem);    
 }

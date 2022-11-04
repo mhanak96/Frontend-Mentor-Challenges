@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.footer{
+
+    .btn-primary--pink{
+        margin-top: rem(24);
+        margin-bottom: rem(38);
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: rem(40);
+    }
+
+    @include break(xlarge){
+        & .box{
+            display: grid;
+            column-gap: rem(182);
+            grid-template: repeat(2 auto) / repeat(2 auto);
+            grid-template-areas: 
+            "title btn"
+            "text btn";
+            align-items: center;
+        }
+    }
+
+    
+}

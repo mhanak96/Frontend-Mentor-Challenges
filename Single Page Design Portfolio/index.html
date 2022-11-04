@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="dist/main.css" />
+    <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body class="body | bg-clr-beige fw-500">
     <header class="header | container flex">
@@ -36,7 +36,7 @@
             <circle stroke="#FFF7F0" stroke-width="4" cx="32" cy="32" r="14" />
           </g>
         </svg>
-        <a href="#" class="btn-cta | btn-primary btn-primary--black">
+        <a href="#" class="btn-cta | btn-primary--black">
           Free consultation
         </a>
       </div>
@@ -51,8 +51,8 @@
       </div>
     </header>
 
-    <main class="main | flow">
-      <section class="section-services | container grid grid--services">
+    <main class="main | flow" style="--flow-gap: 4.25rem">
+      <section class="services | container grid" style="--gap: 1.5rem">
         <div class="card card--1 | bg-clr-purple grid">
           <svg
             class="card__pattern"
@@ -324,47 +324,57 @@
         </div>
       </section>
 
-      <section class="section-about | container grid">
-        <img class="about__image" src="assets/image-amy.webp" />
+      <section class="about | container grid">
+        <img class="image-avatar" src="assets/image-amy.webp" />
         <div class="about__content">
-          <h2 class="about__title | fs-800 center">
+          <h2 class="about__title | fs-800 fw-700">
             I’m Amy, and I’d love to work on your next project
           </h2>
-          <p class="about__text | text-clr-grey center fs-500">
+          <p class="about__text | text-clr-grey fs-500 fw-500">
             I love working with others to create beautiful design solutions.
             I’ve designed everything from brand illustrations to complete mobile
             apps. I’m also handy with a camera!
           </p>
           <a href="#" class="btn-cta | btn-primary btn-primary--pink"
-            >Free Consultation</a
-          >
+        >Free Consultation</a>
         </div>
+       
       </section>
 
-      <section class="section-work">
-        <h3 class="work__title center">My Work</h3>
-        <div class="work__slider | flex">
-          <img src="assets/image-slide-1.jpg" />
-          <img src="assets/image-slide-2.jpg" />
-          <img src="assets/image-slide-3.jpg" />
-          <img src="assets/image-slide-4.jpg" />
-          <img src="assets/image-slide-5.jpg" />
+      <section class="work">
+        <h3 class="work__title | center fs-700 fw-700 ">My Work</h3>
+        <div class="slider | flex">
+          <img class="slider__img" src="assets/image-slide-1.jpg" />
+          <img class="slider__img" src="assets/image-slide-2.jpg" />
+          <img class="slider__img" src="assets/image-slide-3.jpg" />
+          <img class="slider__img" src="assets/image-slide-4.jpg" />
+          <img class="slider__img" src="assets/image-slide-5.jpg" />
         </div>
-        <button class="btn-arrow btn-arrow--left"></button>
-        <button class="btn-arrow btn-arrow--right"></button>
+        <div class="work__buttons">
+          <button class="btn-arrow--left">
+            <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="M8 0 0 8l8 8 1.687-1.687-5.121-5.12h10.241V6.807H4.566l5.121-5.12z"/></svg>
+          </button>
+          <button class="btn-arrow--right">
+            <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path fill="#FFF" d="m6.808 16 8-8-8-8-1.687 1.687 5.121 5.12H.001v2.386h10.241l-5.121 5.12z"/></svg>
+          </button>
+        </div>
+       
       </section>
     </main>
 
     <footer class="footer | container">
-      <div class="footer-box">
-        <h2 class="footer__title">Book a call with me</h2>
-        <p class="footer__text">
+      <div class="box | bg-clr-black text-clr-white">
+        <h2 class="box__title | fs-800 fw-700">Book a call with me</h2>
+        <p class="box__text | fs-500 fw-500">
           I’d love to have a chat to see how I can help you. The best first step
           is for us to discuss your project during a free consultation. Then we
           can move forward from there.
         </p>
+        <a href="#" class="btn-cta box__button | btn-primary btn-primary--pink"
+        >Free Consultation</a>
       </div>
-      <svg
+      <div class="footer__bottom">
+        <svg
         class="logo"
         width="64"
         height="64"
@@ -378,6 +388,8 @@
       <a href="#" class="btn-cta | btn-primary btn-primary--black"
         >Free consultation</a
       >
+      </div>
+     
     </footer>
   </body>
 </html>

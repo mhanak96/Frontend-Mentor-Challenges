@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+.work{
+   
+
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        gap: rem(16);
+        margin-top: rem(32);
+    }
+}

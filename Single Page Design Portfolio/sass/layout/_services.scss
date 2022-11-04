@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.services{
+    grid-template: repeat(6, auto) / repeat(2, auto);
+    grid-template-areas: 
+    "gdesign gdesign"
+    "gdesign gdesign"
+    "uiux apps"
+    "ill ill"
+    "photo photo"
+    "mot mot";
+
+    @include break(large){
+        grid-template: repeat(3, auto) / repeat(4, auto);
+        grid-template-areas: 
+        "gdesign gdesign uiux apps"
+        "gdesign gdesign ill ill"
+        "photo photo mot mot";
+    }
+
+    @include break(xlarge){
+        grid-template: repeat(2, auto) / repeat(6, auto);
+        grid-template-areas: 
+        "gdesign gdesign uiux apps photo photo"
+        "gdesign gdesign ill ill mot mot"
+    }
+
+}

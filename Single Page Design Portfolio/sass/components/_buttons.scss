@@ -7,13 +7,55 @@
     font-weight: var(--fw-500);
     border-radius: rem(28);
     color: var(--clr-white);
+    text-align: center;
+    max-width: rem(148);
+    text-align: center;
+    transition: all .3s;
 
     // media 
 
-    // 
+    
 
     &--black{
+        @extend .btn-primary;
         background-color: var(--clr-black);
+        
+        
+        &:hover{
+            background-color: var(--clr-purple);
+        }
+    }
+
+    &--pink{
+        @extend .btn-primary;
+        background-color: var(--clr-red);
+
+        &:hover{
+            background-color: var(--clr-yellow);
+        }
     }
     
+}
+
+.btn-arrow{
+    background-color: var(--clr-black);
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    margin-bottom: rem(16);
+    transition: all .3s;
+    cursor: pointer;
+
+    &--left{
+       @extend .btn-arrow;
+    }
+
+    &--right{
+       @extend .btn-arrow;
+    }
+
+    &:hover{
+        background-color: var(--clr-purple);
+    }
 }
