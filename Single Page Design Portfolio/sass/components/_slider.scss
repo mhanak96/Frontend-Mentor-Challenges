@@ -1,6 +1,9 @@
 @use '../abstracts' as *;
 
 .slider{
+    margin-inline: auto;
+    justify-content: center;
+    
 
     &__img{
         border-radius: rem(10);

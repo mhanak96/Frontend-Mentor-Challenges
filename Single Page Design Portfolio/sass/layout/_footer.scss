@@ -2,9 +2,12 @@
 
 .footer{
 
+    .box > *:not(:last-child) {
+        margin-bottom: rem(24);
+    }
+    
     .btn-primary--pink{
-        margin-top: rem(24);
-        margin-bottom: rem(38);
+        max-width: rem(190);
     }
 
     &__bottom{

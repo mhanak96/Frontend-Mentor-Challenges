@@ -3,6 +3,10 @@
     grid-template: repeat(2, auto) / 1fr;
     justify-content: center;
 
+    & .image-avatar{
+        margin-bottom: rem(40);
+    }
+
     &__title,
     &__text{
         text-align: center;
@@ -11,12 +15,19 @@
     & .btn-primary--pink{
         margin-inline: auto;
         margin-bottom: rem(16);
+        justify-self: center;
+        max-width: rem(190);
+      
     }
 
     @include break(large){
         grid-template: repeat(1, auto) / 1fr 1fr;
         column-gap: rem(69);
         align-items: center;
+
+        & .image-avatar{
+            margin-bottom: unset;
+        }
 
         &__title,
         &__text{

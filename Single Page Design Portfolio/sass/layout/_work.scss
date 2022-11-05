@@ -1,6 +1,10 @@
 @use '../abstracts' as *;
 
 .work{
+
+    &__title{
+        margin-bottom: rem(32);
+    }
    
 
     &__buttons{
@@ -8,5 +12,12 @@
         justify-content: center;
         gap: rem(16);
         margin-top: rem(32);
+        position: relative;
+    }
+
+    @include break(large){
+        &__buttons{
+            margin-top: rem(56);
+        }
     }
 }

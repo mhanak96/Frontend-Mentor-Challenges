@@ -1,13 +1,36 @@
+@use '../abstracts' as *;
+
 .header{
     flex-direction: column;
     
     &__content-top{
         justify-content: space-between;
         align-items: center;
+        margin-bottom: rem(32);
     }
 }
 
 .slogan{
+    margin-inline: auto;
 
+    &__title{
+        margin-bottom: rem(16);
+    }
+
+    &__text{
+      
+    }
+
+    @include break(large){
+        &__text{
+            max-width: rem(573);
+        }
+    }
+
+    @include break(xlarge){
+        &__text{
+            max-width: rem(700);
+        }
+    }
  
 }

@@ -95,6 +95,12 @@
   background-color: #FFF7F0;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .fs-400 {
   font-size: clamp(0.875rem, 0.8309859155rem + 0.1877934272vw, 1rem);
 }
@@ -155,12 +161,11 @@ h2 {
 .btn-primary, .btn-primary--pink, .btn-primary--black {
   display: block;
   text-decoration: none;
-  padding: 0.5rem 1.75rem;
+  padding: 0.5rem 1.5rem;
   font-weight: var(--fw-500);
   border-radius: 1.75rem;
   color: var(--clr-white);
   text-align: center;
-  max-width: 9.25rem;
   text-align: center;
   transition: all 0.3s;
 }
@@ -218,6 +223,11 @@ h2 {
   height: 9.875rem;
   grid-area: ill;
 }
+@media (min-width: 65em) {
+  .card--4 {
+    height: unset;
+  }
+}
 
 .card--5 {
   grid-area: photo;
@@ -227,6 +237,10 @@ h2 {
   grid-area: mot;
 }
 
+.slider {
+  margin-inline: auto;
+  justify-content: center;
+}
 .slider__img {
   border-radius: 0.625rem;
   max-height: 11.25rem;
@@ -238,7 +252,7 @@ h2 {
 }
 
 .box {
-  padding: 1rem;
+  padding: 3.0625rem 1.5rem;
   text-align: center;
   border-radius: 0.625rem;
 }
@@ -251,16 +265,25 @@ h2 {
 .box__button {
   margin-inline: auto;
   grid-area: btn;
+  justify-self: center;
 }
 @media (min-width: 40.25em) {
   .box {
     padding: 4.6875rem;
+  }
+  .box > * {
+    max-width: 33.75rem;
+    margin-inline: auto;
   }
 }
 @media (min-width: 65em) {
   .box {
     padding: 4.0625rem 5.0625rem;
     text-align: left;
+  }
+  .box > * {
+    max-width: unset;
+    margin-inline: unset;
   }
 }
 
@@ -269,9 +292,11 @@ h2 {
   margin-inline: auto;
 }
 
+.footer .box > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 .footer .btn-primary--pink {
-  margin-top: 1.5rem;
-  margin-bottom: 2.375rem;
+  max-width: 11.875rem;
 }
 .footer__bottom {
   display: flex;
@@ -301,6 +326,24 @@ h2 {
 .header__content-top {
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
+}
+
+.slogan {
+  margin-inline: auto;
+}
+.slogan__title {
+  margin-bottom: 1rem;
+}
+@media (min-width: 40.25em) {
+  .slogan__text {
+    max-width: 35.8125rem;
+  }
+}
+@media (min-width: 65em) {
+  .slogan__text {
+    max-width: 43.75rem;
+  }
 }
 
 .container {
@@ -322,12 +365,17 @@ h2 {
   grid-template: repeat(2, auto)/1fr;
   justify-content: center;
 }
+.about .image-avatar {
+  margin-bottom: 2.5rem;
+}
 .about__title, .about__text {
   text-align: center;
 }
 .about .btn-primary--pink {
   margin-inline: auto;
   margin-bottom: 1rem;
+  justify-self: center;
+  max-width: 11.875rem;
 }
 @media (min-width: 40.25em) {
   .about {
@@ -335,6 +383,9 @@ h2 {
     -moz-column-gap: 4.3125rem;
          column-gap: 4.3125rem;
     align-items: center;
+  }
+  .about .image-avatar {
+    margin-bottom: unset;
   }
   .about__title, .about__text {
     text-align: left;
@@ -344,11 +395,20 @@ h2 {
   }
 }
 
+.work__title {
+  margin-bottom: 2rem;
+}
 .work__buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  position: relative;
+}
+@media (min-width: 40.25em) {
+  .work__buttons {
+    margin-top: 3.5rem;
+  }
 }
 
 .services {

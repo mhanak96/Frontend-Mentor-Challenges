@@ -1,19 +1,16 @@
-@use '../abstracts' as *;
-
+@use "../abstracts" as *;
 
 .card {
-    padding: rem(24);
-    border-radius: rem(8);
+  padding: rem(24);
+  border-radius: rem(8);
 
-   &__pattern{
+  &__pattern {
     justify-self: end;
+  }
 
-   }
-
-   &__title{
+  &__title {
     align-self: end;
-   }
-
+  }
 }
 
 .card--2,
@@ -23,30 +20,30 @@
 }
 
 .card--1 {
-    grid-area: gdesign;
+  grid-area: gdesign;
 }
 
-.card--2{
-    grid-area: uiux;
+.card--2 {
+  grid-area: uiux;
 }
 
-.card--3{
-    grid-area: apps;
+.card--3 {
+  grid-area: apps;
 }
 
-.card--4{
-    height: rem(158);
-    grid-area: ill;
+.card--4 {
+  height: rem(158);
+  grid-area: ill;
+
+  @include break(xlarge) {
+    height: unset;
+  }
 }
 
 .card--5 {
-    grid-area: photo;
+  grid-area: photo;
 }
 
 .card--6 {
-    grid-area: mot;
+  grid-area: mot;
 }
-
-
-
-
