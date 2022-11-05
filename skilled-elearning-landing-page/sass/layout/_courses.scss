@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.courses{
+    display: grid;
+    grid-template: repeat(6, auto) / 1fr;
+    gap: rem(45);
+    align-items: center;
+    grid-template-areas: 
+    "cta"
+    "animation"
+    "design"
+    "photo"
+    "crypto"
+    "business";
+    background: var(--clr-gradient-secondary-light);
+
+    @include break(large){
+        grid-template: repeat(3, auto) / repeat(2, auto);
+    }
+
+    @include break(xlarge){
+        grid-template: repeat(2, auto) / repeat(3, auto);
+        align-items: stretch;
+    }
+
+
+
+}
+

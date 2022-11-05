@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+
+// you can find colors in sass variables - abstract folder
+:root {
+    @each $color, $value in $colors {
+        --clr-#{$color}: #{$value};
+    }
+}
+
+:root{
+    @each $gradient, $gvalue in $gradients {
+        --clr-#{$gradient}: #{$gvalue};
+    }
+}
+
+@each $color, $value in $colors {
+    .clr-#{$color}{
+        color: var(--clr-#{$color});
+    }
+    .bg-#{$color}{
+        background-color: var(--clr-#{$color});
+    }
+}
+
+@each $gradient, $gvalue in $gradients {
+    .bg-#{$gradient}{
+        background: var(--clr-#{$gradient});
+    }
+   
+}
+

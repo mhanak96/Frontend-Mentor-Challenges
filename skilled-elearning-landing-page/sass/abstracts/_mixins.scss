@@ -1,0 +1,8 @@
+@use 'variables' as *;
+
+@mixin break($type) {
+   
+    @media (min-width: map-get($break-points, $type)) {
+        @content;
+    }
+}

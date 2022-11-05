@@ -1,0 +1,42 @@
+$colors: (
+    primary: #f74780,
+    primary-on:#FFA7C3,
+    secondary: #13183f,
+    secondary-on: #666CA3,
+    teritary: #83869A,
+    surface: #FFFFFF,
+);
+
+$gradients: (
+    gradient-primary-light: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%),
+    gradient-secondary-dark: linear-gradient(180deg, #4851ff 0%, #F02AA6 99.92%),
+    gradient-secondary-light: linear-gradient(180deg, #ffffff 0%, #F0F1FF 100%)
+);
+
+$font-sizes: (
+    // 16 -> 18
+    400: clamp(1rem, 0.9559859154929577rem + 0.18779342723004694vw, 1.125rem),
+    // 20 -> 24
+    500: clamp(1.25rem, 1.1619718309859155rem + 0.3755868544600939vw, 1.5rem),
+    // 24 -> 32 
+    600: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem),
+    // 32 -> 40
+    700: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem),
+    // 40-> 56  
+    800: clamp(2.5rem, 2.147887323943662rem + 1.5023474178403755vw, 3.5rem),
+);
+
+$font-weights: (
+    normal: 500,
+    bold: 700,
+    xbold:800,
+);
+
+$break-points:(
+    'large': 48rem,
+    'xlarge': 62.5rem
+)
+
+
+
+

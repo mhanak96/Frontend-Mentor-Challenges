@@ -1,0 +1,9 @@
+@forward 'courses';
+@forward 'footer';
+@forward 'header';
+@forward 'container';
+@forward 'flow';
+
+body{
+    overflow-x: hidden;
+}

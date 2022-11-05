@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+.img-avatar{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+   
+
+    @include break(large){
+        position: absolute;
+        z-index: 0;
+        top: -15%;
+        right: -130%;
+    }
+}
+
+
+

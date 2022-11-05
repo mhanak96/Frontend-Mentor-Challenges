@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.btn{
+    display: block;
+    text-decoration: none;
+    color: var(--clr-surface);
+    font-weight: var(--fw-xbold);
+    font-size: rem(16);
+    border-radius: rem(28);
+
+    &--light{
+        @extend .btn;
+        background: var(--clr-gradient-primary-light);
+        padding: rem(15) rem(38);
+        display: inline-block;
+        // max-width: rem(167);
+    }
+
+    &--medium{
+        @extend .btn;
+        background: var(--clr-gradient-secondary-dark);
+        padding: rem(11) rem(24);        
+
+    }
+
+    &--dark{
+        @extend .btn;
+        padding: rem(11) rem(24);
+        background-color: var(--clr-secondary);
+
+    }
+}

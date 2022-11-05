@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+
+:root{
+    @each $font, $value in $font-sizes {
+        --fs-#{$font}: #{$value};
+    }
+    @each $font, $value in $font-weights {
+        --fw-#{$font}: #{$value};
+    }
+}
+
+    @each $font, $value in $font-sizes {
+        .fs-#{$font}{
+            font-size: var(--fs-#{$font});
+        }
+       
+    }
+
+    @each $font, $value in $font-weights {
+        .fw-#{$font}{
+            font-weight: var(--fw-#{$font});
+        }
+       
+    }
+
+.header__title{
+    line-height: 1.20;
+}

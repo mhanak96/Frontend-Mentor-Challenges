@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.header{
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(16);
+    }
+
+    &__main{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    @include break(large){
+        min-height: 55vh;
+        
+        &__main{
+            position: relative;
+            max-width: 50%;
+        }
+
+        &__top{
+            margin-right: rem(40);
+        }
+    }
+}
